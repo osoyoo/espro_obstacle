@@ -3,10 +3,10 @@
  *| |_| |___ | |_| | |_| | |_| | |_| ( (__| |_| | | | |
  * \___/(___/ \___/ \__  |\___/ \___(_)____)___/|_|_|_|
  *                  (____/ 
- * Arduino Smart Car Tutorial Lesson 5
- * Tutorial URL http://osoyoo.com/2018/12/19/osoyoo-robot-car-kit-lesson-4-obstacle-avoidance-robot-car/
+ * Espro Robot Car Object Avoidace project
+ * Tutorial URL https://osoyoo.com/?p=61263
  * CopyRight www.osoyoo.com
- * This project will show you how to make Osoyoo robot car in auto drive mode and avoid obstacles
+ * This project will show you how to make ESPRO robot car in auto drive mode and avoid obstacles
  */
 #include <ESP32Servo.h>
 #define speedPinR 16    //  RIGHT PWM pin connect MODEL-X ENA
