@@ -163,7 +163,7 @@ int obstacle_status =B100000;
     obstacle_status  =obstacle_status | B100;
     }
 
-  head.write(120);
+  head.write(150);
   delay(400);
   ldiagonalscanval = watch();
   if(ldiagonalscanval<distancelimit){
@@ -171,7 +171,7 @@ int obstacle_status =B100000;
     alarm();
      obstacle_status  =obstacle_status | B1000;
     }
-  head.write(170); //Didn't use 180 degrees because my servo is not able to take this angle
+  head.write(120); //Didn't use 180 degrees because my servo is not able to take this angle
   delay(400);
   leftscanval = watch();
   if(leftscanval<sidedistancelimit){
@@ -188,7 +188,7 @@ int obstacle_status =B100000;
     alarm();
     obstacle_status  =obstacle_status | B100;
     }
-  head.write(40);
+  head.write(60);
   delay(400);
   rdiagonalscanval = watch();
   if(rdiagonalscanval<distancelimit){
@@ -196,7 +196,7 @@ int obstacle_status =B100000;
     alarm();
     obstacle_status  =obstacle_status | B10;
     }
-  head.write(0);
+  head.write(30);
   delay(400);
   rightscanval = watch();
   if(rightscanval<sidedistancelimit){
@@ -295,10 +295,10 @@ void auto_avoidance(){
   
   distance = watch(); // use the watch() function to see if anything is ahead (when the robot is just moving forward and not looking around it will test the distance in front)
   if (distance<distancelimit){ // The robot will just stop if it is completely sure there's an obstacle ahead (must test 25 times) (needed to ignore ultrasonic sensor's false signals)
- Serial.println("final go back");
+ Serial.println("go right");
     go_Right();
-    set_Motorspeed( SPEED,FAST_SPEED);
-  delay(backtime*3/2);
+    set_Motorspeed( SPEED,SPEED);
+  delay(backtime);
       ++thereis;}
   if (distance>distancelimit){
       thereis=0;} //Count is restarted
